@@ -1,8 +1,7 @@
-version = "1.0.0-SNAPSHOT"
 group = "com.mjukvare"
 
 allprojects {
-    version = version
+    version = "1.0.0-SNAPSHOT"
 }
 
 // There are 3 types of plugins:

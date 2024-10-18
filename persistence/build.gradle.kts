@@ -1,5 +1,15 @@
 plugins {
     `java-library`
+    `maven-publish`
+}
+
+publishing {
+    publications {
+        create<MavenPublication>(project.name) {
+            groupId = "${rootProject.group}"
+            from(components["java"])
+        }
+    }
 }
 
 dependencies {
