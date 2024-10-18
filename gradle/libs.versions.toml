@@ -1,0 +1,4 @@
+# Allows dependencies to be referenced as
+# implementation(libs.logback)
+[libraries]
+logback = {module = "ch.qos.logback:logback-core", version = "1.5.11"}
