@@ -1,4 +1,5 @@
 version = "1.0.0-SNAPSHOT"
+group = "com.mjukvare"
 
 allprojects {
     version = version
@@ -24,10 +25,6 @@ dependencies {
     implementation("org.slf4j:slf4j-api:${providers.gradleProperty("slf4j.version")}")
     compileOnly("org.projectlombok:lombok:1.18.34")
     annotationProcessor("org.projectlombok:lombok:1.18.34")
-
-    testImplementation("org.junit.jupiter:junit-jupiter:5.11.2")
-    testCompileOnly("org.projectlombok:lombok:1.18.34")
-    testAnnotationProcessor("org.projectlombok:lombok:1.18.34")
 }
 
 tasks.withType<Test> {
