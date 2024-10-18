@@ -5,28 +5,17 @@ allprojects {
     version = version
 }
 
+// There are 3 types of plugins:
+// - core: are provided by gradle
+// - community: created by others
+// - local: your own custom plugins
 plugins {
-    java
-    id("org.flywaydb.flyway") version "6.3.2"
+    java // core
+    id("org.flywaydb.flyway") version "6.3.2" // community
+    kotlin("jvm") version "2.0.20"
 }
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
-}
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    implementation("ch.qos.logback:logback-core:${providers.gradleProperty("logback.version").get()}")
-    implementation("ch.qos.logback:logback-classic:${providers.gradleProperty("logback.version").get()}")
-    implementation("org.slf4j:slf4j-api:${providers.gradleProperty("slf4j.version")}")
-    compileOnly("org.projectlombok:lombok:1.18.34")
-    annotationProcessor("org.projectlombok:lombok:1.18.34")
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform()
 }
