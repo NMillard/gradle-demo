@@ -15,11 +15,6 @@ application {
     mainClass = "com.mjukvare.demos.webapp.App"
 }
 
-// Needed in submodules even though it's already defined in root build.gradle.kts
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     // Take a dependency on another module.
     // the colon (:) here is the project root.
