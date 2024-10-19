@@ -11,6 +11,9 @@ plugins {
     id("org.sonarqube") version "5.1.0.4882"
 }
 
+// Not necessary for a spring app
+// but still worth having here for
+// future reference.
 application {
     mainClass = "com.mjukvare.demos.webapp.App"
 }
