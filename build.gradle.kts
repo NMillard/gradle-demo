@@ -4,6 +4,11 @@ allprojects {
     version = "1.0.0-SNAPSHOT"
 }
 
+// Use custom build task
+tasks.register<CustomBuildTask>("myCustomTask") {
+    myThing.set("hello")
+}
+
 // There are 3 types of plugins:
 // - core: are provided by gradle
 // - community: created by others
