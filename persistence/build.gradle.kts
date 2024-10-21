@@ -3,6 +3,7 @@ plugins {
     `maven-publish`
 }
 
+// Configuring the publish plugin
 publishing {
     publications {
         create<MavenPublication>(project.name) {
