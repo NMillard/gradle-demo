@@ -7,6 +7,7 @@ publishing {
     publications {
         create<MavenPublication>(project.name) {
             groupId = "${rootProject.group}"
+            artifactId = project.name
             from(components["java"])
         }
     }
